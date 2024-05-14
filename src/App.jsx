@@ -5,30 +5,35 @@ import './App.css';
 const images = [
   {
     src: '1.png',
-    alt: 'Earthbased-Youtubesearch',
+    video: '1.mp4',
+    alt: 'Map Compass',
     description: 'Earthbased-Youtubesearch is a simple app that allows users to search for YouTube videos. The app is built using React.js and Tailwind CSS.',
-    url: 'https://earthbased-youtubesearch.vercel.app/'
+    url: 'https://map-compass.vercel.app/'
   },
   {
     src: '2.png',
-    alt: 'Music Ball',
+    video: '2.mp4',
+    alt: 'Earth-based Youtubesearch',
     description: 'Music Ball is a music player app that allows users to search for songs and play them. The app is built using React.js and Tailwind CSS.',
-    url: 'https://music-ball.vercel.app/'
+    url: 'https://earthbased-youtubesearch.vercel.app/'
   },
   {
     src: '3.png',
+    video: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
     alt: 'Map Compass',
     description: 'Map Compass is a simple app that shows the user\'s current location on a map. The app is built using React.js and Tailwind CSS.',
     url: 'https://map-compass.vercel.app/'
   },
   {
     src: '4.png',
+    video: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
     alt: 'Ground Corps',
     description: 'Ground Corps is a platform for connecting volunteers with organizations that need help. The app is built using React.js and Tailwind CSS.',
     url: 'https://ground-corps.vercel.app/'
   },
   {
     src: '5.png',
+    video: 'https://samplelib.com/lib/preview/mp4/sample-5s.mp4',
     alt: 'City Search',
     description: 'City Search can be used to search for cities around the world. It uses the OpenWeatherMap API to fetch the weather data for the searched city. The app is built using React.js and Tailwind CSS.',
     url: 'https://citysearch-proto.vercel.app/'
@@ -60,31 +65,50 @@ function Gallery({ items, imageWidth, imageHeight, imageSize, horizontalGap, ver
   };
 
   return (
-    <div style={galleryStyle}>
-      {items.map((item, index) => (
-        <div
-          key={index}
-          className="gallery-item"
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={handleMouseLeave}
-          onClick={() => handleClick(item.url)}
-          style={{ cursor: 'pointer' }}
-        >
-          <img
-            src={item.src}
-            alt={item.alt}
-            className="gallery-image"
-            style={{ width: imageWidth, height: imageHeight }}
-          />
-          {hoveredIndex === index && (
-            <div className="hover-info">
-              <h3>{item.alt}</h3>
-              <p>{item.description}</p>
+    <>
+      <div >
+        {items.map((item, index) => (
+          <div
+            style={galleryStyle}
+            key={index}
+            className="gallery-item"
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+            onClick={() => handleClick(item.url)}
+
+          //style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row-reverse' }}
+          >
+            <div className="media-container">
+              {hoveredIndex === index ? (
+                <video
+                  src={item.video}
+                  width={imageWidth}
+                  height={imageHeight}
+                  autoPlay
+                  loop
+                  muted
+                />) : (
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  className="gallery-image"
+                  style={{ width: imageWidth, height: imageHeight }}
+                />)}
             </div>
-          )}
-        </div>
-      ))}
-    </div>
+            <span style={{
+              position: 'absolute',
+              top: '10px', // Adjust as needed
+              left: '10px', // Adjust as needed
+              color: 'white', // Adjust color for visibility
+              textShadow: '0px 0px 8px rgba(0,0,0,0.7)', // Shadow for readability
+              textDecoration: 'underline'
+            }}>
+              {item.alt}
+            </span>
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
@@ -92,7 +116,7 @@ function App() {
   return (
     <div className="App">
       <h1>Portfolio Gallery</h1>
-      <Gallery items={images} imageWidth={250} imageHeight={300} horizontalGap={10} verticalGap={50} />
+      <Gallery items={images} imageWidth={250} imageHeight={300} horizontalGap={40} verticalGap={50} />
     </div>
   );
 }
