@@ -88,18 +88,59 @@
 
 .description-box {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  top: 18%;
+  left: 72%;
+  width: 25%;
+  height: 50%;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: #61dafbaa;
+  background-color: rgba(0, 0, 0, 0);
+  color: #000000aa;
   text-align: center;
-  font-size: 16px;
-  box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);
+  font-size: 22px;
+  /*box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.5);*/
   z-index: 1000;
+  overflow: hidden;
 }
 
+.description-box .text-content {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.description-box::after {
+  content: "";
+  display: block;
+  position: absolute;
+  /* 追加: 位置を絶対位置に設定 */
+  bottom: 0;
+  /* 下に固定 */
+  left: 0;
+  /* 左から0 */
+  width: 100%;
+  /* 幅を親要素に合わせる */
+  border-bottom: 2px solid black;
+  /* 下線の太さと色 */
+}
+
+.button-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.language-button {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  margin: 0 2px;
+}
+
+.language-button:hover {
+  background-color: #e0e0e0;
+  /* ホバー時の背景色 */
+}
 
 .gallery-item2 {
   position: relative;
