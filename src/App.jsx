@@ -71,14 +71,14 @@ function Gallery({ items, imageWidth, imageHeight, imageSize, horizontalGap, ver
           <div
             style={galleryStyle}
             key={index}
-            className="gallery-item"
+            className="gallery-item2"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
             onClick={() => handleClick(item.url)}
 
           //style={{ cursor: 'pointer', display: 'flex', flexDirection: 'row-reverse' }}
           >
-            <div className="media-container">
+            <div className="media-container2">
               {hoveredIndex === index ? (
                 <video
                   src={item.video}
@@ -91,7 +91,7 @@ function Gallery({ items, imageWidth, imageHeight, imageSize, horizontalGap, ver
                 <img
                   src={item.src}
                   alt={item.alt}
-                  className="gallery-image"
+                  className="gallery-image2"
                   style={{ width: imageWidth, height: imageHeight }}
                 />)}
             </div>
