@@ -18,7 +18,7 @@ const imageSources = [
     {
         src: '2.png',
         video: '2.mp4',
-        alt: 'Earth-based Youtubesearch',
+        alt: 'Earth-YoutubeSearch',
         descriptionen: 'Earth-based Youtubesearch is a music player app that allows users to search for songs and play them. The app is built using React.js and Tailwind CSS.',
         descriptionja: 'Earth-based Youtubesearchは、ユーザーが曲を検索して再生できる音楽プレーヤーアプリです。このアプリは、React.jsとTailwind CSSを使用して構築されています。',
         descriptionch: 'Earth-based Youtubesearch是一个音乐播放器应用程序，允许用户搜索歌曲并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
@@ -28,7 +28,7 @@ const imageSources = [
     {
         src: '3.png',
         video: '3.mp4',
-        alt: 'Sphere-City-Search',
+        alt: 'Sphere-CitySearch',
         descriptionen: 'sphere-City-Search is a simple app made by React and Babylonjs, using XR function to city search.',
         descriptionja: 'sphere-City-Searchはこれこれこういうアプリです',
         descriptionch: 'sphere-City-Search是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
@@ -66,7 +66,7 @@ const Gallery = () => {
             {imageSources.map((image, index) => (
                 <div style={{ marginBottom: '6px' }}> {/* 新しくdivを追加し、各アイテムごとに余白を設定 */}
                     <div
-                        style={{ textAlign: 'center', padding: '30px', fontWeight: 'bold', color: 'white', textDecoration: 'underline', cursor: 'pointer' }}
+                        className='gallery-item-title'
                         onClick={() => window.open(image.url, '_blank')}
                     >{image.alt}</div> {/* 見出しをgallery-itemの外に配置 */}
                     <div className='gallery-item'
@@ -131,23 +131,39 @@ function App2() {
         reset: true,
         config: {
             duration: 500,// アニメーションの持続時間をミリ秒で指定
-            tension: 170,  // 張力
-            friction: 26, // 摩擦
+            //tension: 170,  // 張力
+            //friction: 26, // 摩擦
         }
     });
+
+    const fontStyles = { //https://fonts.google.com/?noto.script=Hansここでfont探せる
+        en: {
+            fontFamily: 'Kalam, cursive',
+            // fontFamily: 'Sedan SC, serif',
+        },
+        ja: {
+            fontFamily: 'Hina Mincho, serif',
+        },
+        ch: {
+            fontFamily: 'Ma Shan Zheng, cursive',
+        },
+        ko: {
+            fontFamily: 'Nanum Myeongjo, serif',
+        }
+    };
 
     const getDescriptionByLanguage = () => {
         switch (language) {
             case 'en':
-                return hoveredImage.descriptionen;
+                return { text: hoveredImage.descriptionen, style: fontStyles.en };
             case 'ja':
-                return hoveredImage.descriptionja;
+                return { text: hoveredImage.descriptionja, style: fontStyles.ja };
             case 'ch':
-                return hoveredImage.descriptionch;
+                return { text: hoveredImage.descriptionch, style: fontStyles.ch };
             case 'ko':
-                return hoveredImage.descriptionko;
+                return { text: hoveredImage.descriptionko, style: fontStyles.ko };
             default:
-                return hoveredImage.descriptionen;
+                return { text: hoveredImage.descriptionen, style: fontStyles.en };
         }
     };
 
@@ -160,7 +176,7 @@ function App2() {
     return (
         <ImageContext.Provider value={setHoveredImage}>
             <div className='app'>
-                <h1>Gallery</h1>
+                <h1>Portofolio</h1>
                 <Gallery />
                 {hoveredImage && (
                     <div className="description-box">
@@ -171,7 +187,9 @@ function App2() {
                                 <button className="language-button" onClick={() => setLanguage('ch')}>中</button>
                                 <button className="language-button" onClick={() => setLanguage('ko')}>한</button>
                             </div>
-                            <animated.div style={descriptionSpring}>{getDescriptionByLanguage()}</animated.div>
+                            <animated.div style={{ ...descriptionSpring, ...getDescriptionByLanguage().style }}>
+                                {getDescriptionByLanguage().text}
+                            </animated.div>
                         </div>
                     </div>
                 )}
