@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import React, { useState } from 'react';
 import { BottomNavigation, BottomNavigationAction, AppBar, Toolbar, Typography, Button } from '@mui/material';
-import HomeIcon from '@mui/icons-material/Home';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+//import HomeIcon from '@mui/icons-material/Home';
+//import FavoriteIcon from '@mui/icons-material/Favorite';
+//import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { IoIosPeople, IoIosStar, IoIosMap } from 'react-icons/io';
 
 //import About from './About';  // Aboutページのコンポーネント
 //import Skills from './Skills';  // Skillsページのコンポーネント
@@ -43,9 +44,9 @@ function ButtomNavigateButton() {
         zIndex: 1001 // 他の要素より前面に表示
       }} // スタイルは必要に応じて調整してください
     >
-      <BottomNavigationAction label="Products" icon={<HomeIcon />} />
-      <BottomNavigationAction label="About" icon={<FavoriteIcon />} />
-      <BottomNavigationAction label="Others" icon={<LocationOnIcon />} />
+      <BottomNavigationAction label="Products" icon={<IoIosPeople />} />
+      <BottomNavigationAction label="About" icon={<IoIosStar />} />
+      <BottomNavigationAction label="Others" icon={<IoIosMap />} />
     </BottomNavigation>
   );
 }
