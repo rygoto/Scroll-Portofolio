@@ -45,11 +45,11 @@ const Gallery = () => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             let newHoverIndex = null;
-            if (scrollPosition < 600) {
+            if (scrollPosition < 200) {
                 newHoverIndex = 0;
-            } else if (scrollPosition >= 600 && scrollPosition < 1100) {
+            } else if (scrollPosition >= 200 && scrollPosition < 400) {
                 newHoverIndex = 1;
-            } else if (scrollPosition >= 1100) {
+            } else if (scrollPosition >= 400) {
                 newHoverIndex = 2;
             }
             if (newHoverIndex !== hoverIndex) {
@@ -176,7 +176,7 @@ function App2() {
     return (
         <ImageContext.Provider value={setHoveredImage}>
             <div className='app'>
-                <h1>Portofolio</h1>
+                {/*<h1>Portofolio</h1>*/}
                 <Gallery />
                 {hoveredImage && (
                     <div className="description-box">
