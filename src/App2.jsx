@@ -34,6 +34,26 @@ const imageSources = [
         descriptionch: 'sphere-City-Search是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
         descriptionko: 'sphere-City-Search는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
         url: 'https://citysearch-proto.vercel.app/'
+    },
+    {
+        src: '4.png',
+        video: '4.mp4',
+        alt: 'Audio-Ball-Player',
+        descriptionen: 'Audio-Ball-Player is a simple app made by React and Babylonjs, using XR function to play music.',
+        descriptionja: 'Audio-Ball-Playerはこれこれこういうアプリです',
+        descriptionch: 'Audio-Ball-Player是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
+        descriptionko: 'Audio-Ball-Player는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
+        url: 'https://audio-ball.vercel.app/'
+    },
+    {
+        src: '5.png',
+        video: '5.mp4',
+        alt: 'Ground-Corps',
+        descriptionen: 'Ground-Corps is a simple app made by React and Babylonjs, using XR function to play music.',
+        descriptionja: 'Ground-Corpsはこれこれこういうアプリです',
+        descriptionch: 'Ground-Corps是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
+        descriptionko: 'Ground-Corps는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
+        url: 'https://xr-corps.vercel.app/'
     }
 ];
 
@@ -41,7 +61,7 @@ const Gallery = () => {
     const setImageData = useContext(ImageContext);
     const [hoverIndex, setHoverIndex] = useState(null);
 
-    useEffect(() => {
+    useEffect(() => {//ここのロジックはintersectの監視に変える
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             let newHoverIndex = null;
@@ -63,6 +83,7 @@ const Gallery = () => {
 
     return (
         <div className='gallery-container'>
+            <p>やっほーぷくはち</p>
             {imageSources.map((image, index) => (
                 <div style={{ marginBottom: '6px' }}> {/* 新しくdivを追加し、各アイテムごとに余白を設定 */}
                     <div
@@ -101,8 +122,12 @@ function App2() {
                 newHoverIndex = 0;
             } else if (scrollPosition >= 500 && scrollPosition < 1100) {
                 newHoverIndex = 1;
-            } else if (scrollPosition >= 1100) {
+            } else if (scrollPosition >= 1100 && scrollPosition < 1700) {
                 newHoverIndex = 2;
+            } else if (scrollPosition >= 1700 && scrollPosition < 2300) {
+                newHoverIndex = 3;
+            } else if (scrollPosition >= 2300) {
+                newHoverIndex = 4;
             }
             if (newHoverIndex !== hoverIndex) {
                 setHoverIndex(newHoverIndex);
@@ -156,12 +181,12 @@ function App2() {
         switch (language) {
             case 'en':
                 return { text: hoveredImage.descriptionen, style: fontStyles.en };
-            case 'ja':
-                return { text: hoveredImage.descriptionja, style: fontStyles.ja };
             case 'ch':
                 return { text: hoveredImage.descriptionch, style: fontStyles.ch };
             case 'ko':
                 return { text: hoveredImage.descriptionko, style: fontStyles.ko };
+            case 'ja':
+                return { text: hoveredImage.descriptionja, style: fontStyles.ja };
             default:
                 return { text: hoveredImage.descriptionen, style: fontStyles.en };
         }
@@ -183,9 +208,9 @@ function App2() {
                         <div className='text-content'>
                             <div className="button-container">
                                 <button className="language-button" onClick={() => setLanguage('en')}>en</button>
-                                <button className="language-button" onClick={() => setLanguage('ja')}>日</button>
                                 <button className="language-button" onClick={() => setLanguage('ch')}>中</button>
                                 <button className="language-button" onClick={() => setLanguage('ko')}>한</button>
+                                <button className="language-button" onClick={() => setLanguage('ja')}>日</button>
                             </div>
                             <animated.div style={{ ...descriptionSpring, ...getDescriptionByLanguage().style }}>
                                 {getDescriptionByLanguage().text}
