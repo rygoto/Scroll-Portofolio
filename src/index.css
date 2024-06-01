@@ -25,11 +25,17 @@ a:hover {
 
 body {
   background-color: rgb(129, 230, 218);
+  background-image: url('BG3.png');
   margin: 0;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-size: cover;
+  /*cover;*/
+  /* 画像を画面いっぱいに広げる */
+  background-position: center;
+
 }
 
 h1 {

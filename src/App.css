@@ -60,7 +60,7 @@
   /*padding: 10px;*/
   padding-top: 60px;
   /*上部の余白(一番上の画像との)*/
-  background-color: rgb(129, 230, 218);
+  background-color: rgba(163, 214, 210, 0);
   /*rgb(95, 160, 152);*/
   height: 900vh;
   width: 100%;
