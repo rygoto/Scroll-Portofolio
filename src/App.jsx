@@ -10,6 +10,7 @@ import About from './About';  // Aboutページのコンポーネント
 //import Projects from './Projects';  // Projectsページのコンポーネント
 //import Contact from './Contact';  // Contactページのコンポーネント
 import App2 from './App2';  // App2ページのコンポーネント
+import Contact from './Contact';
 
 function Header() {
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -33,7 +34,7 @@ function Header() {
     <AppBar position="fixed" sx={{ backgroundColor: '#d84315' }}>
       <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Portofolio Gallery
+          Gallery
         </Typography>
         <IconButton
           color="inherit"
@@ -142,9 +143,7 @@ function App() {
       <Routes>
         <Route path="/" element={<App2 />} />
         <Route path="/about" element={<About />} />
-        {/*<Route path="/skills" element={<Skills />} />
-           <Route path="/projects" element={<Projects />} />
-           <Route path="/contact" element={<Contact />} />*/}
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   );
