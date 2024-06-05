@@ -9,7 +9,7 @@ import About from './About';  // Aboutページのコンポーネント
 //import Skills from './Skills';  // Skillsページのコンポーネント
 //import Projects from './Projects';  // Projectsページのコンポーネント
 //import Contact from './Contact';  // Contactページのコンポーネント
-import App2 from './App2';  // App2ページのコンポーネント
+import Product from './Product';  // App2ページのコンポーネント
 import Contact from './Contact';
 
 function Header() {
@@ -22,7 +22,16 @@ function Header() {
     setDrawerOpen(open);
   };
 
-  const scrollToPos = (pos) => {
+  const getScrollPosition = (basepos) => {
+    if (window.innerWidth > 600) {
+      return (basepos + 380) * 61 / 40 - 600;
+    } else {
+      return basepos;
+    }
+  }
+
+  const scrollToPos = (basepos) => {
+    const pos = getScrollPosition(basepos);
     window.scrollTo({
       top: pos,
       behavior: 'smooth'
@@ -55,6 +64,7 @@ function Header() {
               invisible: true  // これによってバックドロップは透明になり、画面は暗くならない
             }
           }}
+          //classes={{ paper: classes.drawerPaper }}
           sx={{
             paddingTop: '64px', // AppBarの下から開始するように調整
             '& .MusiDrawer-paper': {
@@ -63,24 +73,25 @@ function Header() {
               top: 46, // AppBarの高さを考慮して配置
               maxWidth: 'calc(100% - 40px)', // 最大幅は画面幅から40pxを引いたもの
               boxSizing: 'border-box',  // paddingを含めた幅で計算
-              color: 'black'
+              color: 'blue',
+              height: '46px', // 画面高さからAppBarの高さを引いたもの
             }
           }}
         >
           <List>
-            <ListItem button onClick={() => scrollToPos(100)}>
+            <ListItem button onClick={() => scrollToPos(20)}>
               <ListItemText primary="MapCompass" />
             </ListItem>
-            <ListItem button onClick={() => scrollToPos(500)}>
+            <ListItem button onClick={() => scrollToPos(420)}>
               <ListItemText primary="Earth-YoutubeSearch" />
             </ListItem>
-            <ListItem button onClick={() => scrollToPos(900)}>
+            <ListItem button onClick={() => scrollToPos(820)}>
               <ListItemText primary="Sphere-CitySearch" />
             </ListItem>
-            <ListItem button onClick={() => scrollToPos(1300)}>
+            <ListItem button onClick={() => scrollToPos(1220)}>
               <ListItemText primary="Audio-Ball-Player" />
             </ListItem>
-            <ListItem button onClick={() => scrollToPos(1700)}>
+            <ListItem button onClick={() => scrollToPos(1620)}>
               <ListItemText primary="Ground-Corps" />
             </ListItem>
           </List>
@@ -141,7 +152,7 @@ function App() {
       <Header />
       <ButtomNavigateButton />
       <Routes>
-        <Route path="/" element={<App2 />} />
+        <Route path="/" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

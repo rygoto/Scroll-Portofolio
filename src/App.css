@@ -305,6 +305,26 @@
   }
 }
 
+.fadeIn {
+  opacity: 0;
+  color: #000000aa;
+  animation: fadeInAnimation 1.5s forwards;
+  animation-delay: calc(var(--animation-order) * 0.7s);
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /*
 .gallery-item2 {
   position: relative;

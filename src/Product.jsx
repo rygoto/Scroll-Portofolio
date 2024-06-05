@@ -1,61 +1,9 @@
 import React, { useEffect, useState, useContext, createContext } from 'react';
 import { useSpring, animated } from 'react-spring';
 import './App.css';
+import { imageSources } from './Source';
 
 const ImageContext = createContext(null);
-
-const imageSources = [
-    {
-        src: '1.png',
-        video: '1.mp4',
-        alt: 'Map Compass',
-        descriptionen: 'Map Compass is a simple app made by React and Babylonjs, using XR function to map search.',
-        descriptionja: 'Map Compssはこれこれこういうアプリです',
-        descriptionch: 'MapCompass是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
-        descriptionko: 'Map Compass는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
-        url: 'https://map-compass.vercel.app/'
-    },
-    {
-        src: '2.png',
-        video: '2.mp4',
-        alt: 'Earth-YoutubeSearch',
-        descriptionen: 'Earth-based Youtubesearch is a music player app that allows users to search for songs and play them. The app is built using React.js and Tailwind CSS.',
-        descriptionja: 'Earth-based Youtubesearchは、ユーザーが曲を検索して再生できる音楽プレーヤーアプリです。このアプリは、React.jsとTailwind CSSを使用して構築されています。',
-        descriptionch: 'Earth-based Youtubesearch是一个音乐播放器应用程序，允许用户搜索歌曲并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
-        descriptionko: 'Earth-based Youtubesearch는 사용자가 노래를 검색하고 재생할 수 있는 음악 플레이어 앱입니다. 이 앱은 React.js와 Tailwind CSS를 사용하여 제작되었습니다.',
-        url: 'https://earthbased-youtubesearch.vercel.app/'
-    },
-    {
-        src: '3.png',
-        video: '3.mp4',
-        alt: 'Sphere-CitySearch',
-        descriptionen: 'sphere-City-Search is a simple app made by React and Babylonjs, using XR function to city search.',
-        descriptionja: 'sphere-City-Searchはこれこれこういうアプリです',
-        descriptionch: 'sphere-City-Search是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
-        descriptionko: 'sphere-City-Search는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
-        url: 'https://citysearch-proto.vercel.app/'
-    },
-    {
-        src: '4.png',
-        video: '4.mp4',
-        alt: 'Audio-Ball-Player',
-        descriptionen: 'Audio-Ball-Player is a simple app made by React and Babylonjs, using XR function to play music.',
-        descriptionja: 'Audio-Ball-Playerはこれこれこういうアプリです',
-        descriptionch: 'Audio-Ball-Player是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
-        descriptionko: 'Audio-Ball-Player는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
-        url: 'https://audio-ball.vercel.app/'
-    },
-    {
-        src: '5.png',
-        video: '5.mp4',
-        alt: 'Ground-Corps',
-        descriptionen: 'Ground-Corps is a simple app made by React and Babylonjs, using XR function to play music.',
-        descriptionja: 'Ground-Corpsはこれこれこういうアプリです',
-        descriptionch: 'Ground-Corps是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
-        descriptionko: 'Ground-Corps는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
-        url: 'https://xr-corps.vercel.app/'
-    }
-];
 
 const Gallery = () => {
     const setImageData = useContext(ImageContext);
@@ -83,7 +31,7 @@ const Gallery = () => {
 
     return (
         <div className='gallery-container'>
-            <p>やっほーぷくはち</p>
+            {/*<p>やっほーぷくはち</p>*/}
             {imageSources.map((image, index) => (
                 <div style={{ marginBottom: '6px' }}> {/* 新しくdivを追加し、各アイテムごとに余白を設定 */}
                     <div
@@ -109,7 +57,7 @@ const Gallery = () => {
     );
 };
 
-function App2() {
+function Product() {
     const [hoveredImage, setHoveredImage] = useState(null);
     const [language, setLanguage] = useState('en');
     const [hoverIndex, setHoverIndex] = useState(null);
@@ -223,6 +171,6 @@ function App2() {
     );
 }
 
-export default App2;
+export default Product;
 
 

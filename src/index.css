@@ -24,8 +24,8 @@ a:hover {
 }
 
 body {
-  background-color: rgb(129, 230, 218);
-  background-image: url('BG3.png');
+  background-color: rgb(124, 210, 177);
+  /*background-image: url('BG3.png');*/
   margin: 0;
   display: flex;
   place-items: center;
