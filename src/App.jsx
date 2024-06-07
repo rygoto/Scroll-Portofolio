@@ -10,6 +10,7 @@ import About from './About';  // Aboutページのコンポーネント
 //import Projects from './Projects';  // Projectsページのコンポーネント
 //import Contact from './Contact';  // Contactページのコンポーネント
 import Product from './Product';  // App2ページのコンポーネント
+import Product2 from './Products2';
 import Contact from './Contact';
 
 function Header() {
@@ -39,11 +40,17 @@ function Header() {
     //setDrawerOpen(false);
   }
 
+  /*Color配色
+  Appjsx:Appbar,index.css:body
+  1:#B3C8CF,#F1EEDC
+  2:#F6F4EB,#749BC2
+  3:#322C2B,#ffead5
+  */
   return (
-    <AppBar position="fixed" sx={{ backgroundColor: '#d84315' }}>
+    <AppBar position="fixed" sx={{ backgroundColor: '#322C2B' }}>
       <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-          Gallery
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }} color="white" left="100px">
+
         </Typography>
         <IconButton
           color="inherit"
@@ -55,6 +62,7 @@ function Header() {
           <IoIosArrowDropdownCircle />
         </IconButton>
         <Drawer
+          containerStyle={{ height: '64px', top: 64 }}
           anchor='right'
           open={drawerOpen}
           onClose={toggleDrawer(false)}
@@ -93,6 +101,9 @@ function Header() {
             </ListItem>
             <ListItem button onClick={() => scrollToPos(1620)}>
               <ListItemText primary="Ground-Corps" />
+            </ListItem>
+            <ListItem button onClick={() => scrollToPos(2020)}>
+              <ListItemText primary="Particle-Labyrinth" />
             </ListItem>
           </List>
         </Drawer>
@@ -135,7 +146,8 @@ function ButtomNavigateButton() {
         right: 0, // 右端に固定。必要に応じて `left: 0` に変更して左端に配置
         //margin: 'auto', // 水平中央に配置
         bottom: 0, // 下部に固定。必要に応じて `top: 0` に変更して上部に配置
-        zIndex: 1001 // 他の要素より前面に表示
+        zIndex: 1001, // 他の要素より前面に表示
+        color: 'black',
       }} // スタイルは必要に応じて調整してください
     >
       <BottomNavigationAction label="Products" icon={<IoIosImages />} />
@@ -152,7 +164,7 @@ function App() {
       <Header />
       <ButtomNavigateButton />
       <Routes>
-        <Route path="/" element={<Product />} />
+        <Route path="/" element={<Product2 />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>

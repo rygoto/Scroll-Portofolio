@@ -48,5 +48,15 @@ export const imageSources = [
         descriptionch: 'Ground-Corps是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
         descriptionko: 'Ground-Corps는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
         url: 'https://xr-corps.vercel.app/'
+    },
+    {
+        src: '6.png',
+        video: '6.mp4',
+        alt: 'Partilcle-Labyrinth',
+        descriptionen: 'Particle-Labyrinth is a simple app made by React and Babylonjs, using XR function to play music.',
+        descriptionja: 'Particle-Labyrinthはこれこれこういうアプリです',
+        descriptionch: 'Particle-Labyrinth是一个简单的应用程序，允许用户搜索YouTube视频并播放它们。该应用程序使用React.js和Tailwind CSS构建。',
+        descriptionko: 'Particle-Labyrinth는 지도 검색을 위해 XR 기능을 사용하여 React와 Babylonjs로 만든 간단한 앱입니다.',
+        url: 'https://particle-labyrinth.vercel.app/'
     }
 ];

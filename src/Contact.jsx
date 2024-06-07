@@ -17,9 +17,9 @@ function Contact() {
 
     return (
         <div>
-            <p><IoMdMail style={{ cursor: 'pointer' }} /> Email: rydyuno0108@gmail.com</p>
-            <p><IoLogoTwitter onClick={handleTwitterClick} style={{ cursor: 'pointer' }} /> Twitter: @eight_999_q</p>
-            <p><IoLogoLinkedin onClick={handleLinkedInClick} style={{ cursor: 'pointer' }} /> LinkedIn: Ryu</p>
+            <p color='black'><IoMdMail style={{ cursor: 'pointer' }} /> Email: rydyuno0108@gmail.com</p>
+            <p color='black'><IoLogoTwitter onClick={handleTwitterClick} style={{ cursor: 'pointer' }} /> Twitter: @eight_999_q</p>
+            <p color='black'><IoLogoLinkedin onClick={handleLinkedInClick} style={{ cursor: 'pointer' }} /> LinkedIn: Ryu</p>
         </div>
     );
 }
