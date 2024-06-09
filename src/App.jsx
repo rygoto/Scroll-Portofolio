@@ -38,7 +38,7 @@ function Header() {
       top: pos,
       behavior: 'smooth'
     });
-    //setDrawerOpen(false);
+    setDrawerOpen(false);
   }
 
   /*Color配色
