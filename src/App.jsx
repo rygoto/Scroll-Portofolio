@@ -11,6 +11,7 @@ import About from './About';  // Aboutページのコンポーネント
 //import Contact from './Contact';  // Contactページのコンポーネント
 import Product from './Product';  // App2ページのコンポーネント
 import Product2 from './Products2';
+import Product3 from './Product3';
 import Contact from './Contact';
 
 function Header() {
@@ -164,7 +165,7 @@ function App() {
       <Header />
       <ButtomNavigateButton />
       <Routes>
-        <Route path="/" element={<Product2 />} />
+        <Route path="/" element={<Product3 />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
