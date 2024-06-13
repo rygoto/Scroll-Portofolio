@@ -67,7 +67,7 @@ const Gallery = ({ setHoveredImage, setHoverIndex }) => {
 
 const Product3 = () => {
     const [hoveredImage, setHoveredImage] = useState(null);
-    const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('ja');
     const [hoverIndex, setHoverIndex] = useState(null);
 
     const descriptionSpring = useSpring({
@@ -123,7 +123,7 @@ const Product3 = () => {
                     <div className="description-box">
                         <div className='text-content'>
                             <div className="button-container">
-                                <button className="language-button" onClick={() => setLanguage('en')}>en</button>
+                                <button className="language-button" onClick={() => setLanguage('en')}>EN</button>
                                 <button className="language-button" onClick={() => setLanguage('ch')}>中</button>
                                 <button className="language-button" onClick={() => setLanguage('ko')}>한</button>
                                 <button className="language-button" onClick={() => setLanguage('ja')}>日</button>

@@ -3,10 +3,10 @@ export const imageSources = [
         src: '1.png',
         video: '1.mp4',
         alt: 'Map Compass',
-        descriptionen: "Created for trying prototypes with combining AR display and searching City.Controls Google maps like a compass, searching shops in the real world.Developed with Babylonjs. Click each icon, then search the objects represented with the icon in the compass-maps area. Area's extent can also be changed.",
-        descriptionja: 'Map Compassは、ARディスプレイと都市検索を組み合わせたプロトタイプを試すために作成されました。Googleマップのようなコンパスでコントロールし、現実世界の店舗を検索します。Babylonjsで開発されました。各アイコンをクリックすると、コンパスマップエリアにアイコンで表されるオブジェクトを検索します。エリアの範囲も変更できます。',
-        descriptionch: '为了尝试将AR显示和搜索城市结合起来的原型而创建。像指南针一样控制Google地图，搜索现实世界中的商店。使用Babylonjs开发。单击每个图标，然后在指南针地图区域中搜索用图标表示的对象。区域的范围也可以更改。',
-        descriptionko: 'AR 디스플레이와 도시 검색을 결합한 프로토타입을 시도하기 위해 만들어졌습니다. Google지도와 같은 나침반으로 제어하여 현실 세계의 상점을 검색합니다. Babylonjs로 개발되었습니다. 각 아이콘을 클릭하면 나침반-지도 영역에 아이콘으로 표시된 객체를 검색합니다. 영역의 범위도 변경할 수 있습니다.',
+        descriptionen: "developed a prototype using Babylon.js that combines AR functionality with urban search capabilities. By treating the map as a compass, I conceived an experience that connects the exploration of real urban spaces to handheld objects, akin to navigating a voyage. Users can easily search for stores and landmarks by clicking on icons. The simultaneous placement of icons on the map and their AR display in real space allows for intuitive understanding of distance and direction.",
+        descriptionja: 'AR機能と都市内検索を組み合わせる表現のプロトタイプとしてBabylon.jsで制作しました。地図を方位磁石のように扱うことで、航海をするように、現実の都市空間探索を手元のオブジェクトへとシームレスに接続できる体験を考案しました。アイコンをクリックすることで簡単に店舗やランドマークを検索できます。地図上へのアイコン配置と現実空間へのアイコンのAR表示を同時に行い、距離感や方角を直観的に把握できるようにしました。',
+        descriptionch: '我使用Babylon.js开发了一个原型，结合了增强现实功能和城市搜索功能。通过将地图视为指南针，我构想了一种体验，将真实城市空间的探索与手持物体相连接，类似于进行航海。用户可以通过点击图标轻松搜索商店和地标。图标同时在地图上和实际空间中的AR显示，使得距离和方向的理解直观易懂。',
+        descriptionko: 'Babylon.js를 사용하여 AR 기능과 도시 검색 기능을 결합한 프로토타입을 개발했습니다. 지도를 나침반처럼 취급하여, 실제 도시 공간 탐색을 손에 든 물체와 연결하는 경험을 구상했습니다. 사용자는 아이콘을 클릭하여 쉽게 상점과 랜드마크를 검색할 수 있습니다. 아이콘은 지도상에 배치되고 실제 공간에서 AR로 표시되므로 거리와 방향을 직관적으로 이해할 수 있습니다.',
         url: 'https://map-compass.vercel.app/'
     },
     {
@@ -14,7 +14,7 @@ export const imageSources = [
         video: '2.mp4',
         alt: 'Earth-YoutubeSearch',
         descriptionen: 'Prototype, searching objects combined with simple 3d primitives.As one example, this app searches youtube by controlling the earth globe.Developed with React and Three.js',
-        descriptionja: 'プロトタイプ、シンプルな3Dプリミティブと組み合わせたオブジェクト検索。例えば、このアプリは地球の球体を制御してYouTubeを検索します。ReactとThree.jsで開発されました。    ',
+        descriptionja: 'データ探索を、3Dプリミティブなオブジェクト操作と組み合わせる探索方法のプロトタイプとしてReactとThree.jsで制作しました。１例として、ここでは各国のYoutubeの動画をgoogle earthのように地球儀を回転させることで検索できます。3Dオブジェクトを探索コントロールの基盤に使用することで、連続的で多方角的な検索の在り様を模索しました。',
         descriptionch: '原型，搜索与简单的3D基元相结合的对象。例如，该应用程序通过控制地球球体搜索YouTube。使用React和Three.js开发。',
         descriptionko: '프로토타입, 간단한 3D 기본 요소와 결합된 객체 검색. 예를 들어, 이 앱은 지구 구를 제어하여 YouTube를 검색합니다. React와 Three.js로 개발되었습니다',
         url: 'https://earthbased-youtubesearch.vercel.app/'
@@ -24,7 +24,7 @@ export const imageSources = [
         video: '3.mp4',
         alt: 'Sphere-CitySearch',
         descriptionen: 'Second prototype combining searching and primitive objects.Express each city as a textured sphere.Developed with React and Three.js.Dive into the sphere, and search for something in the city.',
-        descriptionja: '第2のプロトタイプ、検索とプリミティブオブジェクトを組み合わせる。各都市をテクスチャ付きの球体として表現します。ReactとThree.jsで開発されました。球体にダイブして、都市で何かを検索します。',
+        descriptionja: '同じく3Dプリミティブと探索の組み合わせのプロトタイプとして、都市検索機能を例にして制作しました。更に、各街をテクスチャーで描画された球体によって表現し、そこにダイブすることで探索空間に入るという仕様にしました。街探索に3Dオブジェクト内の物理的インタラクションという新しい側面を加え、さらに他の街の探索についても開かれるような空間の開発を目指しました。ReactとThree.jsで開発しました。',
         descriptionch: '第二个原型，结合搜索和基本对象。将每个城市表示为纹理球体。使用React和Three.js开发。潜入球体，搜索城市中的某物。',
         descriptionko: '검색 및 기본 객체를 결합한 두 번째 프로토타입. 각 도시를 텍스처가 입힌 구로 표현합니다. React와 Three.js로 개발되었습니다. 구로 다이빙하여 도시에서 무언가를 검색합니다',
         url: 'https://citysearch-proto.vercel.app/'

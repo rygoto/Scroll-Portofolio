@@ -10,9 +10,9 @@ function About() {
 
     return (
         <div>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 0 }}>Hello! I am Gotou.</p>
+            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 0 }}>Hello! I am Hiyokoya.</p>
             <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 1 }}>I am studying something.</p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 2 }}>Some application.</p>
+            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 2 }}>There are some applications.</p>
             <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 3 }}>Hey, make more money.</p>
         </div>
     );
