@@ -212,8 +212,8 @@
     top: 65%;
     left: 50%;
     width: 100%;
-    /*height: 80%;*/
-    height: 23%;
+    height: 80%;
+    /*height: 23%;*/
     transform: translateX(-50%);
     background-color: #322c2bd7;
     /*#b8b8b8f1*/
@@ -231,7 +231,7 @@
     /*font-family: "Ma Shan Zheng", cursive;*/
     max-height: 100%;
     color: #ffffff;
-    padding-bottom: 150px;
+    padding-bottom: 370px;
     /*overflow-y: auto;*/
   }
 
