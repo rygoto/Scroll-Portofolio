@@ -47,7 +47,7 @@ export const imageSources = [
         descriptionja: '現実空間に現れた軍隊と、彼らの視点から見える空想世界の間をシームレスに行き来できる体験をBabylonjsで開発しました。AR空間での現実的視点と、ARオブジェクトを起点に広がる空間への想像を繋げるような体験を目指しました。',
         descriptionch: '查看现实中出现的军团。添加了一个切换场景功能，可以使摄像机潜入他们自己的视野。在真实空间和虚拟空间之间自由切换。使用Babylon.js开发。',
         descriptionko: '현실에 나타난 군단을 볼 수 있습니다. 카메라가 자신의 시야로 다이빙 할 수있는 씬 전환 기능을 추가했습니다. 실제 공간과 가상 공간을 자유롭게 전환할 수 있습니다. Babylon.js로 개발되었습니다.',
-        url: 'https://xr-corps.vercel.app/'
+        url: 'https://ground-virtual-soldiers.vercel.app/'
     },
     {
         src: '6.png',
