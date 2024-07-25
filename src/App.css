@@ -342,7 +342,7 @@
   color: #000000aa;
   animation: fadeInAnimation 1.5s forwards;
   animation-delay: calc(var(--animation-order) * 0.7s);
-  font-size: 20px;
+  font-size: 14px;
 }
 
 @keyframes fadeInAnimation {
