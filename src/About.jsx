@@ -10,14 +10,22 @@ function About() {
 
     return (
         <div>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 0 }}>Thank you for watching my website.</p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 1 }}>I'm Hiyokoya.</p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 2 }}>I'm interested in developing </p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 3 }}>an interacting UI with 3D space. </p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 4 }}>For now, I'm a university student in Japan,</p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 5 }}>and looking for a job.</p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 6 }}>Here are my products.</p>
-            <p className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 7 }}>Please have a look around!</p>
+            <div className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 0 }}>
+                <p >Thank you for watching my website.</p>
+                <p >I'm Hiyokoya.</p>
+            </div>
+            <div className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 1 }}>
+                <p >I'm interested in developing</p>
+                <p >an interacting UI with 3D space. </p>
+            </div>
+            <div className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 2 }}>
+                <p >For now, I'm a university student in Japan,</p>
+                <p >and looking for a job. </p>
+            </div>
+            <div className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 3 }}>
+                <p >Here are my products.</p>
+                <p >Please have a look around!</p>
+            </div>
         </div>
     );
 }//毎回降りるようになってるけど、一回だけにするか   

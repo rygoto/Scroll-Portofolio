@@ -16,10 +16,10 @@ function Contact() {
     };
 
     return (
-        <div>
-            <p color='black'><IoMdMail style={{ cursor: 'pointer' }} /> Email: ryuunosukegotou0@gmail.com</p>
-            <p color='black'><IoLogoTwitter onClick={handleTwitterClick} style={{ cursor: 'pointer' }} /> Twitter: @eight_999_q</p>
-            <p color='black'><IoLogoLinkedin onClick={handleLinkedInClick} style={{ cursor: 'pointer' }} /> LinkedIn: Ryu</p>
+        <div className="contact-info">
+            <p><IoMdMail /> Email: ryuunosukegotou0@gmail.com</p>
+            <p onClick={handleTwitterClick}><IoLogoTwitter /> Twitter: @eight_999_q</p>
+            <p onClick={handleLinkedInClick}><IoLogoLinkedin /> LinkedIn: Ryu</p>
         </div>
     );
 }
