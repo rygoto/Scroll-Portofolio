@@ -4,7 +4,7 @@ import { IoMdMail, IoLogoTwitter, IoLogoLinkedin } from 'react-icons/io';
 
 function Contact() {
     const handleEmailClick = () => {
-        window.location.href = "mailto:rydyuno0108@gmail.com";
+        window.location.href = "mailto:ryuunosukegotou0@gmail.com";
     };
 
     const handleTwitterClick = () => {
@@ -17,7 +17,7 @@ function Contact() {
 
     return (
         <div>
-            <p color='black'><IoMdMail style={{ cursor: 'pointer' }} /> Email: rydyuno0108@gmail.com</p>
+            <p color='black'><IoMdMail style={{ cursor: 'pointer' }} /> Email: ryuunosukegotou0@gmail.com</p>
             <p color='black'><IoLogoTwitter onClick={handleTwitterClick} style={{ cursor: 'pointer' }} /> Twitter: @eight_999_q</p>
             <p color='black'><IoLogoLinkedin onClick={handleLinkedInClick} style={{ cursor: 'pointer' }} /> LinkedIn: Ryu</p>
         </div>
