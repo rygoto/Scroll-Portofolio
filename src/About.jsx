@@ -26,6 +26,10 @@ function About() {
                 <p >Here are my products.</p>
                 <p >Please have a look around!</p>
             </div>
+            <div className={isVisible ? 'fadeIn' : ''} style={{ '--animation-order': 4 }}>
+                <p >If you are interested,</p>
+                <p >feel free to contact me.</p>
+            </div>
         </div>
     );
 }//毎回降りるようになってるけど、一回だけにするか   
