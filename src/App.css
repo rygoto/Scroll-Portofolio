@@ -128,20 +128,21 @@
   /*overflow-y: auto;*/
 }
 
-.description-box::after {
+/*.description-box::after {
   content: "";
   display: block;
   position: relative;
   /* 追加: 位置を絶対位置に設定 */
+/*
   bottom: 0;
   /* 下に固定 */
-  left: 0;
+/*left: 0;
   /* 左から0 */
-  width: 100%;
+/*width: 100%;
   /* 幅を親要素に合わせる */
-  border-bottom: 2px solid black;
+/*border-bottom: 2px solid black;
   /* 下線の太さと色 */
-}
+/*}*/
 
 .button-container {
   text-align: center;
